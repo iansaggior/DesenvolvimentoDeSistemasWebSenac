@@ -1,0 +1,60 @@
+body {
+  background-color: darkgrey;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img.fotoPerfilIan{
+  width: 100%;
+  max-width: 200px;
+  padding: 14px;
+  position: relative;
+  display: flex;
+  margin: 10px 10px 10px 20% ;
+}
+
+img.imgIcon {
+  max-width: 6%;
+  margin: 5px 10px;
+}
+
+div.infoContato {
+  background-color: blue;
+  color: white;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  height: 300px;
+  padding: 10px;
+  margin: 1px 5%;
+}
+
+div.infoContatoTexto {
+  background-color: #ff0000;
+  padding: 15px;
+  border: 3px solid #111;
+  min-height: 100px;
+  width: 100%;
+  max-width: 400px;
+}
+
+div.formacaoAcademica {
+  background-color: blue;
+  padding: 20px;
+  margin: 10px 450px;
+  display: flex;
+  min-height: 300px;
+}
+
+
+/* div.container {
+  padding: 10px;
+  background-color: aquamarine;
+} */
