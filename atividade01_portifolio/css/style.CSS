@@ -1,0 +1,136 @@
+body {
+  background-color: darkgrey;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  /* text-align: center; */
+  font-size: 25px;
+  margin-bottom: 55px;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+h1, li {
+  color: black;
+}
+
+img.fotoPerfilIan{
+  width: 100%;
+  max-width: 160px;
+  min-height: 200px;
+  padding: 8px;
+  position: relative;
+  display: flex;
+  margin: 10px 10px 10px 10% ;
+}
+
+img.imgIcon {
+  max-width: 6%;
+  margin: 5px 10px;
+}
+
+div.infoContato {
+  /* background-color: blue; */
+  /* border: 3px solid #111; */
+  color: white;
+  display: flex;
+  width: 50%;
+  height: 220px;
+  /* padding: 10px; */
+  margin: 20px 27% 20px;
+}
+
+div.infoContatoTexto {
+  /* background-color: #ff0000; */
+  /* padding: 10px; */
+  /* border: 3px solid #111; */
+  min-height: 90px;
+  width: 100%;
+  max-width: 700px;
+  min-width: 700px;
+}
+
+div.formacaoAcademica {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 1px 35% 15px 32%;
+  display: flex;
+  min-height: 100px;
+  border-radius: 20px;
+  border-top: 20px solid rgba(68, 114, 196);
+}
+
+
+@media only screen and (min-width: 501px) and (max-width:700px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  img.fotoPerfilIan {
+    width: 50%;
+    max-width: 160px;
+    min-height: 200px;
+    padding: 8px;
+    margin: 10px;
+    margin-left: 50px;
+  }
+
+  img.imgIcon {
+    max-width: 7%;
+  }
+    
+  div.infoContato {
+    width: 80%;
+    margin: 20px auto;
+    margin-bottom: 20px;
+  }
+  
+  div.infoContatoTexto {
+    min-height: auto;
+    width: calc(50% - 20px); /* Adjust width to fit side by side */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  div.formacaoAcademica {
+    margin: 10px 10% 15px 15%;
+    padding: 10px;
+    border-top: 10px solid rgba(68, 114, 196);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  img.fotoPerfilIan {
+    width: 50%;
+    max-width: 160px;
+    min-height: 200px;
+    margin: 10px;
+    margin-left: 30px;
+  }
+
+  img.imgIcon {
+    max-width: 7%;
+  }
+    
+  div.infoContato {
+    width: 100%;
+    margin: 20px auto;
+    margin-bottom: 30px;
+  }
+    
+  div.formacaoAcademica {
+    margin: 10px 10% 15px 10px;
+    padding: 10px;
+    border-top: 10px solid rgba(68, 114, 196);
+  }
+}
