@@ -31,3 +31,4 @@ Outros requisitos
 2.	O arquivo .html será aberto no navegador e a tela deverá ser carregada com o layout correto.
 3.	Avaliação do código entregue.
 
+
