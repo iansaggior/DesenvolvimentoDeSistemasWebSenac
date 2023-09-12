@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <h1>Exemplos Javascript</h1>
+    <button id="mudarCor">Mudar cor div</button>
+    <div id="conteudo">
+
+    </div>
+    <a href="https://sp.senac.br">Site do Senac</a><br/>
+    <div class="portifolioIan">
+      <a href="./pastaBlob/index.html">Portifolio Ian</a>
+    </div>
+    <script>
+      let elH1 = document.querySelector('h1');
+      elH1.innerHTML = 'Texto alterado via Javascript';
+
+      let elDiv = document.getElementById('conteudo');
+      elDiv.innerHTML = '<p>Texto adicionado via Javascript</p><p>Outro <b>texto</b></p>';
+
+      let elArrayP = document.querySelectorAll('p');
+      for (let i = 0; i < elArrayP.length; i++) {
+        elArrayP[i].style.color = 'pink';
+      }
+      
+      document.querySelector('#conteudo > p:last-child').style.color = 'blue';
+
+      let divReferencia = document.getElementById('conteudo');
+      divReferencia.insertAdjacentHTML('afterend', '<div class="adjacente">Texto adjacentHTML</div>');
+
+      let btnMudarCor = document.getElementById('mudarCor');
+      btnMudarCor.onclick = function() {
+        let elDiv = document.getElementById('conteudo');
+        elDiv.classList.toggle('fundo');
+      };
+
+      let elA = document.querySelector('a');
+      elA.onclick = function(evt) {
+        evt.preventDefault();
+        alert('Clicou no link');
+      }
+    </script>
+  </body>
+</html>

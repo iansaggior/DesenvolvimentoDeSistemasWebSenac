@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+#conteudo {
+  border: 3px dashed #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+#conteudo.fundo {
+  background-color: yellow;
+
+}
+
+.adjacente {
+  background-color: cyan;
+}
+
+.portifolioIan>a {
+  background-color: rgb(106, 255, 116);
+  padding: 5px;
+}
+.portifolioIan{
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 91%;
+}
