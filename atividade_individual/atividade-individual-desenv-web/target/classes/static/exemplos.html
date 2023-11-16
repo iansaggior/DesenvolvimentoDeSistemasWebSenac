@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplos Spring MVC REST</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Exemplos Spring MVC REST</h1>
+    <div>
+      <form id="busca">
+        <input id="termo" type="search" name="termo" />
+        <button>Buscar</button>
+      </form>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Nome</td>
+          <td>E-mail</td>
+          <td>Telefone</td>
+          <td>Data nascimento</td>
+        </tr>
+      </thead>
+      <tbody id="resultado">
+      </tbody>
+    </table>
+    <script src="funcoes.js"></script>
+    <script>
+
+      async function findAll() {
+        try {
+          const resultados = await getJson('/dados-pessoais');
+          document.getElementById('resultado').innerHTML = '';
+          for (const dados of resultados) {
+            let linha = '<tr>' +
+                '<td>' + dados.id + '</td>' +
+                '<td>' + dados.nome + '</td>' +
+                '<td>' + dados.email + '</td>' +
+                '<td>' + dados.telefone + '</td>' +
+                '<td>' + dados.dataNascimento + '</td>' +
+                '</tr>';
+            document.getElementById('resultado').insertAdjacentHTML('beforeend', linha);
+          }
+        } catch(err) {
+          alert(err);
+        }
+      }
+
+      async function buscar(evt) {
+        evt.preventDefault();
+        //const termo = document.getElementById('termo').value;
+        const termo = evt.target.termo.value;
+        try {
+          const resultados = await getJson('/dados-pessoais/busca?termo=' + termo + '&quantidade=10');
+          document.getElementById('resultado').innerHTML = '';
+          for (const dados of resultados) {
+            let linha = '<tr>' +
+                '<td>' + dados.id + '</td>' +
+                '<td>' + dados.nome + '</td>' +
+                '<td>' + dados.email + '</td>' +
+                '<td>' + dados.telefone + '</td>' +
+                '<td>' + dados.dataNascimento + '</td>' +
+                '</tr>';
+            document.getElementById('resultado').insertAdjacentHTML('beforeend', linha);
+          }
+        } catch (err) {
+          alert(err);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', findAll);
+      document.getElementById('busca').onsubmit = buscar;
+    </script>
+  </body>
+</html>
